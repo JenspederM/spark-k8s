@@ -1,0 +1,12 @@
+apiVersion: skaffold/v2beta29
+kind: Config
+deploy:
+  helm:
+    releases:
+      - name: spark-operator
+        chartPath: spark-operator
+        namespace: spark-jobs
+        createNamespace: true
+  kubectl:
+    manifests:
+      - "manifests/*.yaml"

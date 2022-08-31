@@ -10,8 +10,8 @@
 #   - spark-operator/
 
 . scripts/utils.sh
-
 logger info "Initializing a new git repository"
+exit 1
 
 git init
 
